@@ -3784,7 +3784,7 @@ input[type="button"].btn--primary:focus {
     background-color: var(--color-gray-17);
     padding-top: calc(6 * var(--space));
     padding-bottom: var(--vspace-4);
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .s-about h3 {
