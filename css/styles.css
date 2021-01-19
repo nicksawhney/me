@@ -3567,6 +3567,11 @@ input[type="button"].btn--primary:focus {
     margin-right: 0;
 }
 
+.s-hero__content-social li {
+    list-style: none;
+    margin-right: var(--vspace-0_75);
+}
+
 /* ------------------------------------------------------------------- 
  * ## hero scrolldown
  * ------------------------------------------------------------------- */
