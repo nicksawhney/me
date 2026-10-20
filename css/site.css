@@ -140,6 +140,13 @@ a { color: inherit; }
   border-top: 1px solid var(--rule);
 }
 
+.section__intro {
+  max-width: var(--measure);
+  color: var(--fg-muted);
+  margin-top: calc(var(--space-l) * -1 + var(--space-s));
+  margin-bottom: var(--space-l);
+}
+
 .section__title {
   font-size: var(--step-1);
   font-family: var(--font-sans);
@@ -423,6 +430,25 @@ a { color: inherit; }
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Stands in for a screenshot on the CLI project. Scrolls rather than wraps,
+   so the commands stay copy-pasteable. */
+.code {
+  margin: 0;
+  padding: var(--space-s) var(--space-m);
+  background: var(--bg-sunk);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-size: var(--step--1);
+  line-height: 1.7;
+  -webkit-overflow-scrolling: touch;
+}
+
+.code code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre;
 }
 
 .project__figure {

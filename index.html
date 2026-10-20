@@ -241,6 +241,26 @@
         <div class="projects">
 
           <article class="project">
+            <h3 class="project__title">Music Bingo</h3>
+            <div class="project__body prose">
+              <p>
+                I host music bingo at bars around Brooklyn, and got tired of
+                copy-pasting a few hundred songs into web forms every week. So I built
+                a set of command line tools that take a round from a themed song list
+                to a PDF of randomized, printable cards in two commands: one script
+                pulls a Spotify playlist into a text file, another drives BingoBaker
+                with Puppeteer to generate the cards. I use Claude to draft the themed
+                lists, which is the slow part of planning a night. It's open source
+                under MIT.
+                <a class="link" href="https://github.com/nicksawhney/music-bingo"
+                   target="_blank" rel="noopener">See it on GitHub.</a>
+              </p>
+            </div>
+            <pre class="code"><code>node scripts/spotify.js get-playlist &lt;playlist-url&gt; --output round1.txt
+node scripts/bingobaker.js create "Round 1 - Pop Divas" round1.txt</code></pre>
+          </article>
+
+          <article class="project">
             <h3 class="project__title">Bernie Sits</h3>
             <div class="project__body prose">
               <p>
@@ -320,11 +340,12 @@
     <section class="section" id="press">
       <div class="wrap">
         <h2 class="section__title">Press</h2>
+        <p class="section__intro">Bernie Sits got picked up fairly widely in January 2021.</p>
         <ul class="press">
 
           <li class="press__item">
             <img class="press__logo" src="images/press/nyt.webp" alt="The New York Times"
-                 width="120" height="96" loading="lazy" decoding="async">
+                 width="147" height="120" loading="lazy" decoding="async">
             <blockquote class="press__quote">
               “Nick Sawhney, a software engineer in New York, created a tool that allows
               you to insert Mr. Sanders into any street address in Google Maps street
@@ -340,7 +361,7 @@
 
           <li class="press__item">
             <img class="press__logo" src="images/press/wired.webp" alt="Wired"
-                 width="96" height="96" loading="lazy" decoding="async">
+                 width="576" height="120" loading="lazy" decoding="async">
             <blockquote class="press__quote">
               “Sawhney's creation, born out of a group chat with friends, added layers
               of personalization, ease of use, and absurdity.”
@@ -355,7 +376,7 @@
 
           <li class="press__item">
             <img class="press__logo" src="images/press/buzzfeed.webp" alt="BuzzFeed News"
-                 width="96" height="96" loading="lazy" decoding="async">
+                 width="120" height="120" loading="lazy" decoding="async">
             <blockquote class="press__quote">
               “It seems inevitable that a 22-year-old grad student would create the
               ultimate site to make the meme game much more accessible to anyone who
@@ -371,7 +392,7 @@
 
           <li class="press__item">
             <img class="press__logo" src="images/press/insider.webp" alt="Insider"
-                 width="96" height="96" loading="lazy" decoding="async">
+                 width="766" height="120" loading="lazy" decoding="async">
             <blockquote class="press__quote">
               “The website, created by Nick Sawhney, asks for a zipcode or address and
               then puts Sanders in that neighborhood using Google Maps.”
