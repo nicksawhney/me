@@ -1,663 +1,442 @@
-<-- adapted by nick sawhney -->
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Nick Sawhney</title>
-    <meta name="description" content="Nick's personal website">
-    <meta name="author" content="">
-    <link rel="image_src" href="images/fare-map.png" />
+  <title>Nick Sawhney — Software Engineer</title>
+  <meta name="author" content="Nick Sawhney">
+  <meta name="description"
+        content="Nick Sawhney is a software engineer in New York building AI systems and data products. Previously Amazon, Urvin Finance and NYU.">
+  <link rel="canonical" href="https://nicksawhney.github.io/me/">
 
+  <!-- Open Graph / Twitter: the old site had none, so shared links
+       rendered with no preview at all. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nicksawhney.github.io/me/">
+  <meta property="og:title" content="Nick Sawhney — Software Engineer">
+  <meta property="og:description"
+        content="Software engineer in New York building AI systems and data products. Previously Amazon, Urvin Finance and NYU.">
+  <meta property="og:image" content="https://nicksawhney.github.io/me/images/hero-1600.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Preload the two above-the-fold fonts so swap happens early. -->
+  <link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibm-plex-serif-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/vendor.css">
-
-    <!-- script
-    ================================================== -->
-    <script defer src="js/vendor/fontawesome/all.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#101216">
 </head>
 
-<body id="top" class="ss-preload">
+<body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader"></div>
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="header__home" href="#top">Nick Sawhney</a>
+      <nav class="nav" aria-label="Sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Say hi</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
+  <main id="main">
 
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-        <div class="row s-header__nav-wrap">
-            <nav class="s-header__nav">
-                <ul>
-                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
-                    <li><a class="smoothscroll" href="#about">About</a></li>
-                    <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
-                    <li><a class="smoothscroll" href="#interview">Interview</a></li>
-                    <li><a class="smoothscroll" href="#press">Press</a></li>
-                    <li><a class="smoothscroll" href="#education">Education</a></li>
-                    <li><a class="smoothscroll" href="#contact">Say Hi!</a></li>
-                </ul>
-            </nav>
-        </div> <!-- end row -->
-        
-        <a class="s-header__menu-toggle" href="#0" title="Menu">
-            <span class="s-header__menu-icon"></span>
-        </a>
-    </header> <!-- end s-header -->
+    <!-- hero =============================================================== -->
+    <section class="hero" id="top">
+      <picture>
+        <source srcset="images/hero-2560.webp" media="(min-width: 1200px)" type="image/webp">
+        <source srcset="images/hero-1600.webp" type="image/webp">
+        <!-- Decorative: the map is atmosphere, and the page text carries the
+             meaning. Empty alt is correct here; role="presentation" alongside
+             it is invalid. -->
+        <img class="hero__img" src="images/hero-1600.jpg" alt=""
+             width="1600" height="807" fetchpriority="high">
+      </picture>
 
-
-    <!-- hero
-    ================================================== -->
-    <section id="hero" class="s-hero target-section">
-
-        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
-
-        <div class="row s-hero__content">
-            <div class="column">
-
-                <div class="s-hero__content-about">
-
-                    <h1>I'm Nick Sawhney.</h1>
-
-                    <h3>
-                    I'm a New York based <span>creative technologist</span>, <span>software engineer,</span> and <span>musician</span> passionate about using technology to build cool things, make people happy, and express myself. <a class="smoothscroll" href="#about">Start scrolling</a>
-                    and learn more <a class="smoothscroll" href="#about">about me</a>.
-                    </h3>
-
-                    <div class="s-hero__content-social">
-                        <li><a href="https://www.github.com/nicksawhney"><i class="fab fa-github" aria-hidden="true" target="_blank"></i></a></li>
-
-                        <li><a href="https://www.linkedin.com/in/nick-sawhney-66331b121/"><i class="fab fa-linkedin-in" aria-hidden="true" target="_blank"></i></a></li>
-                    
-                    </div>
-
-                </div> <!-- end s-hero__content-about -->
-
-            </div>
-        </div> <!-- s-hero__content -->
-
-        <div class="s-hero__scroll">
-            <a href="#about" class="s-hero__scroll-link smoothscroll">
-                <span class="scroll-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
-                </span>
-                <span class="scroll-text">Scroll Down</span>
+      <div class="wrap">
+        <h1>I'm Nick Sawhney.</h1>
+        <p class="hero__tagline">
+          A New York based <em>creative technologist</em>, <em>software engineer</em>
+          and <em>musician</em>, passionate about using technology to build cool
+          things, make people happy, and express myself.
+        </p>
+        <ul class="social">
+          <li>
+            <a href="https://github.com/nicksawhney" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              <span class="sr-only">GitHub</span>
             </a>
-        </div> <!-- s-hero__scroll -->
-
-    </section> <!-- end s-hero -->
-
-
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about target-section">
-
-        <div class="row">
-            <div class="column large-3 tab-12">
-                <img class="s-about__pic" src="images/avatars/profile_img.JPG" alt="">
-            </div>
-            <div class="column large-9 tab-12 s-about__content">
-                <h3>About Me</h3>
-                <p>
-                    I'm a 23 year-old software engineer. I like biking in the city, making music, and drinking cold brew. I'm passionate about using technology to build things that solve interesting problems, make a social impact, and sometimes just to make people laugh. 
-                </p>
-
-                <hr>
-
-                <div class="row s-about__content-bottom">
-                    <div class="column w-1000-stack">
-                        <h3>Contact Details</h3>
-    
-                        <p>
-                        Nick Sawhney <br>
-                        <!-- 1600 Amphitheatre Parkway <br>
-                        Mountain View, CA 94043 US <br>
-                        <a href="tel:+1975432345">+197 543 2345</a> <br> -->
-                        <a href="mailto:#0">nicksawhney@nyu.edu</a>
-                        </p>
-                        
-                    </div>
-                    <div class="column w-1000-stack">
-                        <a href="Nick Sawhney Resume.pdf" class="btn btn--download" download target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path><path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path></svg>
-                            Download CV
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end row -->
-
-    </section> <!-- end s-about -->
-    <section id="portfolio" class="s-portfolio target-section">
-        <!-- <div class="row s-resume__section"> -->
-            <!-- <div class="row s-portfolio__header"> -->
-        <div align="center">
-            <h2> <u> A Few Of My Latest Creations </u></h2>
-        </div>
-        <p></p>
-            <!-- </div> -->
-        <!-- </div> -->
-        <div class="resume-block__header">
-            <h3 align="center"> Bernie Sits </h3>
-        </div> 
-        
-        <div class="resume-block">
-        <!-- <div class="column large-9 tab-12"> -->
-            <div align="center" style="padding-right: 15%; padding-left: 15%">
-                 <p>I made a website where people could put a picture of Bernie Sanders, sitting with his mittens on inaugration day, anywhere in the world with Google Maps street view. It went viral, hitting 9.8 million site requests in 4 days, and garnered some press attention as well. I immediately had 2 problems: scaling to meet the demand, and paying for the API requests to Google Maps. Luckily, I got in contact with some great engineers who taught me how to scale in real-time, and more than 7,000 people donated money to help pay for the costs. I learned a lot in this project, and hopefully gave some people a good meme along the way. </a> </p>
-                 Here's a video I made sharing the story!
-        <!-- </div> -->
-            </div>
-
-            <div align="center">
-                <iframe style="width: 45%; height: 600px" src="https://www.youtube.com/embed/xSvuGU5Nvwc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-
-            <!-- </div> -->
-        <div class="resume-block__header">
-            <h3 align="center"> Fare Evasion </h3>
-        </div> 
-        
-        <div class="resume-block">
-        <!-- <div class="column large-9 tab-12"> -->
-            <div align="center" style="padding-right: 15%; padding-left: 15%">
-                 <p>For my undergraduate thesis, I researched changes in fare evasion arrests in New York City's subway system as a result of new enforcement policies from the Manhattan District Attorney. For accessibility, I made an interactive map you can use to explore the data set I created for the paper. Feel free to click around!<a href='https://github.com/nicksawhney/fare_evasion/blob/master/Sawhney_Thesis.pdf' target="_blank"> Read the paper here.</a> </p>
-        <!-- </div> -->
-            </div>
-
-            <div align="center">
-                <iframe src="https://nicksawhney.github.io/fare_evasion/" style="border-style: none;width: 80%; height: 600px; display: block;"></iframe>
-            </div>
-        </div>
-        <p><p><p>
-
-
-        <div class="resume-block__header">
-            <h3 align="center"> NYC Air Pollution </h3>   
-        </div>    
-        <div class="resume-block">
-            <div align="center" style="padding-right: 15%; padding-left: 15%">
-            
-            <p>I noticed that I would cough a lot more during my commute when pollutant levels were high, so I did a brief survey of air quality in the city and its health impacts. This was one of my first projects about the city, and introduced me to the complexities of dealing with different types of map projections and geographic data. It's also a great example of how easy it is to turn around a project from NYC Open Data. <a href='https://nicksawhney.github.io/NYCAirMaps/' target="_blank"> Check out the jupyter notebook </a> </p>
-            <img src="images/air-map-head.jpeg" style="border-style: none;width: 80%; height: 80%; display: block;">
-            </div> 
-        
-        </div>
-    </div>
-    
-
-
-    <section id="interview">
-        <div id="interview" class="resume-block__header">
-            <h3 align="center"> Interview on Viralily and Other Projects </h3>
-        </div>
-        <div class="resume-block">
-            <div align="center" style="padding-right: 15%; padding-left: 15%">
-                <p> This interview was originally conducted by OpenSource.com, but was not published due to the potential political content. I decided to publish it here instead! Thanks to <a href="https://www.linkedin.com/in/adelyanis/"> Allie Delyanis </a> for the help! </p>
-                <div align="left" style="padding-right: 5%; padding-left: 5%">               
-                <h4 id="tell-me-about-the-process-of-creating-bernie-sits.-how-did-the-idea-come-to-you-and-how-long-did-it-take-you-to-get-the-site-live">1) Tell me about the process of creating Bernie Sits. How did the idea come to you, and how long did it take you to get the site live?</h4>
-
-<p>The idea came to me basically out of nowhere, though definitely inspired by the light silly attitude I saw all over Twitter on inauguration day. It definitely feels like there was a much-needed reset that day, across social media. It took me about an hour of building and half an hour of testing before I felt comfortable putting the site up. I&#39;m glad I took the half hour to test -- it meant that when traffic started picking up later that night I was able to focus on new scale-specific problems.  </p>
-<h4 id="your-background-includes-expertise-in-geographic-data-visualizations.-how-did-you-incorporate-google-street-view-into-the-site">2) Your background includes expertise in geographic data visualizations. How did you incorporate Google Street View into the site?</h4>
-<p>Thanks for mentioning this! I&#39;m a huge nerd for everything geospatial and really want to do more rigorous work with it in the future. I figured that there would be an API to let me access Google Maps and there was! Incorporating google maps was dead simple at first -- I used the `requests` library to make a `GET` request to the API with the location from the form on the frontend and got returned a jpeg. 
-
-When the site started getting more traffic, I quickly blew through my free api credits and people started getting error messages. Incredibly amusing to me was that the error message was still returned as a jpeg, so the site was just plopping bernie into an <a href="https://twitter.com/quitdying/status/1352099282334216194" target="_blank">infinite white void with an &quot;X&quot; in the middle.</a> To get around this, I had to implement a signing/authentication module (mostly taken directly from the google cloud documentation) on the fly. The cool part was I was able to get direct feedback on whether the site was working or not throughout the development process because people were constantly retweeting with their own images, I just had to check to make sure I had those instead of comments about how the site was broken!  </p>
-<h4 id="i-think-the-sites-simple-ui-is-a-key-reason-why-it-took-off.-which-tech-stack-did-you-use-to-build-bernie-sits">3) I think the site's simple UI is a key reason why it took off. Which tech stack did you use to build Bernie Sits?</h4>
-<p>Dead simple tech stack. Flask app calling functions to get the image from google and add bernie to them. Deployed on heroku with as many concurrent gunicorn workers as possible. The image manipulation is done with `cv2`. Normally, I would&#39;ve used `Pillow`, but I&#39;ve been wanting to get into `cv2` for use with practicing making CNNs and GANs. Since I had no idea the site would get popular at all, I went with cv2 just to learn the library a bit more, having only used it to help a friend with her homework one time. </p>
-<h4 id="how-long-did-it-take-for-bernie-sits-to-go-viral-and-at-which-point-did-you-realize-your-site-was-at-risk-of-crashing">4) How long did it take for Bernie Sits to go viral, and at which point did you realize your site was at risk of crashing?</h4>
-<p>It took me about half an hour after posting to start completely freaking out. At that point, I bit the bullet and started increasing the tiers of machine and scaling as I saw fit but still trying to save costs wherever possible. Eventually, I got scaling help from some really cool people at Heroku. This also led me to open the crowdfunding page, which became very useful once I started getting charged for API calls as well. </p>
-<h4 id="you-told-wired-that-had-you-known-bernie-sits-would-be-so-popular-you-wouldve-done-everything-differently.-what-lessons-can-open-source-maintainers-learn-from-your-experience">5) You told WIRED that had you known Bernie Sits would be so popular, you would've done everything differently. What lessons can open source maintainers learn from your experience?</h2>
-<p>I was definitely hyperbolizing a bit there (I was very sleep deprived during this interview) but I think what I meant was that my overall approach was a scrappy just build and release kind of vibe. This does make sense if you&#39;re looking for a simple couple-hour project just to put online for fun. That being said, I&#39;ve got a couple takeaways. First, test as much as you can. It&#39;ll save your life. Write test suites if you can, and think a bit more critically about the balance between release time/scaling prep if it&#39;s something like this where the timing is everything. </p>
-<h4 id="you-also-told-wired-that-google-charges-you-a-fee-to-return-the-correct-images-users-ask-for.-whats-your-long-term-plan-to-keep-bernie-sits-online">6) You also told WIRED that Google charges you a fee to return the correct images users ask for. What's your long-term plan to keep Bernie Sits online?</h4>
-<p>People keep messaging me on twitter/email/linkedin asking why I don&#39;t just put ads on the thing to support it. I don&#39;t like ads. I don&#39;t want to make a site with ads. I don&#39;t think I would have crowdfunded as much if there were ads. Finally, it just doesn&#39;t seem to be in the spirit of the meme to put ads on it, crowdfunding feels much more grassroots! Luckily, the higher total volume the lower the cost per use, so moving forward I expect the financial burden to keep the site to be much lower. So, I plan on crowdfunding again! I do not expect the popularity to be as high this time around so hopefully costs and donations are more manageable. I&#39;m going to be working on some open-source tools to monitor the api usage vs crowdfunding, and automate pulling of the core api-using functionality when funds dip below the required threshold. Also, I&#39;m going to be putting up some content on YouTube and potentially looking into more longer-term regular crowdfunding i.e. to support the site, and maybe even my future work! For now, my page at <a href="https://buymeacoffee.com/nicksawhney" target="_blank">Buy Me A Coffee</a> is still open.</p>
-<h4 id="the-code-for-bernie-sits-is-now-open-source-where-can-readers-go-to-learn-more-and-contribute-to-the-project">7) The code for Bernie Sits is now open source! Where can readers go to learn more and contribute to the project?</h4>
-<p>Please feel free to visit <a href="https://www.github.com/nicksawhney/bernie-sits/" target="_blank"> the github</a> to contribute! While the meme site is cool, what I really really would love help on is developing those open source tools I mentioned above. It would be so awesome if the next time someone goes viral like this, they don&#39;t have to spend the time worrying about costs, worrying if they should go to sleep because they might wake up with a credit card overcharge, etc. Instead, they might have the tools to just enjoy the ride! Not to sound ungrateful of course, the multi-faceted stress/exhilaration I felt during the site&#39;s lifetime was the most intense period of rapid learning I have ever undergone. </p>
-<p>Thanks so much for having me and asking such insightful questions! Hope to hear more from y'all soon.</p>
-</div>
-
-            </div>
-        </div>
-    </div>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nick-sawhney-66331b121/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146Zm4.943 12.248V6.169H2.542v7.225h2.401Zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016Zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4Z"/></svg>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- resume
-    ================================================== -->
-    <!-- <section id="resume" class="s-resume target-section">
-        
-        <div class="row s-resume__section">
-            <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Career</h3>
+    <!-- about ============================================================== -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2 class="section__title">About</h2>
+        <div class="about">
+          <picture>
+            <source srcset="images/profile.webp" type="image/webp">
+            <img class="about__pic" src="images/profile.jpg"
+                 alt="Nick Sawhney, smiling, in front of a Brooklyn Bridge–City Hall subway sign."
+                 width="600" height="600" loading="lazy" decoding="async">
+          </picture>
+
+          <div>
+            <p class="prose">
+              I'm a 27-year-old software engineer. I like biking in the city, making
+              music, and drinking cold brew. I'm passionate about using technology to
+              build things that solve interesting problems, make a social impact, and
+              sometimes just to make people laugh.
+            </p>
+            <p class="prose">
+              These days I work on AI and backend systems at
+              <a class="link" href="https://evolutioniq.com" target="_blank" rel="noopener">EvolutionIQ</a>,
+              where I built the backend and insights engine for our workers'
+              compensation product — LLM extraction pipelines, data modelling, and the
+              services around them.
+            </p>
+
+            <div class="about__contact">
+              <a class="btn" href="nick_sawhney_resume.pdf">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 16l4-5h-3V4h-2v7H8l4 5z"/><path d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"/></svg>
+                Download CV
+              </a>
+              <a class="link" href="mailto:nicksawhney@gmail.com">nicksawhney@gmail.com</a>
             </div>
-            <div class="column large-9 tab-12">
-                <div class="resume-block">
-
-                    <div class="resume-block__header">
-                        <h4 class="h3">Skopos Labs</h4>
-                        <p class="resume-block__header-meta">
-                            <span>Engineering Intern</span> 
-                            <span class="resume-block__header-date">
-                                May 2019 - May 2020
-                            </span>
-                        </p>
-                    </div>
-
-                    <p>
-                        Skopos Labs is a small Brooklyn based start-up with 6 employees that uses publicly available legislative data to predict market impacts for a large number of high-profile corporate clients. The tight-knit and fast paced work environment gave me a number of responsibilities normally reserved for full-time employees. These included being chief writer and maintainer on a key simulation engine, rapidly iterating on a set of financial analysis and data pipelining tools for other developers, creating dynamic and complex data schemas, conducting code reviews, writing test suites, and documenting the company's legacy codebase.  
-                    </p>    
-
-                </div> 
-            </div>
-        </div>  -->
-
-    
-
-
-    <!-- portfolio
-    ================================================== -->
-    
-
-
-<!--         <div class="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list"> -->
-
-<!--             <div class="column folio-item">
-                <a href="#modal-01" class="folio-item__thumb">
-                    <img src="images/fare-map.png" 
-                         srcset="images/fare-map-sq.png 1x, 
-                                 images/fare-map-sq.png 2x" alt=""> -->
-                <!-- </a> -->
-            <!-- </div> end folio-item -->
-<!-- 
-        
-
-            <div class="column folio-item">
-                <a href="#modal-02" class="folio-item__thumb">
-                    <img src="images/air-map-sq.png" 
-                         srcset="images/air-map-sq.png 1x, 
-                                 images/air-map-sq.png 2x" alt=""> -->
-                <!-- </a> -->
-            <!-- </div> end folio-item -->
-            <!-- </div> end folio-list -->
-            
-
-        <!-- </div>  -->
-
-
-        <!-- Modal Templates Popup
-        =========================================================== -->
-        <div id="modal-01" hidden>
-            <div class="modal-popup">
-                <img src="images/fare-map.png" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Fare Evasion</h5>
-                    <p>I researched changes in fare evasion arrests in New York City's subway system as a result of new enforcement policies from the Manhattan District Attorney. For accessibility, I made an interactive map you can use to explore the data set I created for the project. <a href='https://github.com/nicksawhney/fare_evasion/blob/master/Sawhney_Thesis.pdf' target="_blank"> Read the paper here.</a> </p>
-<!--                     <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                        <li>Product Design</li>
-                    </ul> -->
-                </div>
-    
-                <a href="https://nicksawhney.github.io/fare_evasion/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <hr>
-
-        <div id="modal-02" hidden>
-            <div class="modal-popup">
-                <img src="images/air-map-head.jpeg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Air Quality</h5>
-                    <p>I noticed that I would cough a lot more during my commute when pollutant levels were high, so I did a brief survey of air quality in the city and its health impacts. This was one of my first projects with Pandas, Folium, and introduced me to the complexities of dealing with different types of map projections and geographic data.</p>
-<!--                     <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                    </ul> -->
-                </div>
-    
-                <a href="https://nicksawhney.github.io/NYCAirMaps" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-03" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Minimalismo</h5>
-                    <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-04" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-shutterbug.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Shutterbug</h5>
-                    <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
-                    <ul class="modal-popup__cat">
-                        <li>E-Commerce</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-05" hidden>
-            <div class="modal-popup">
-
-                <img src="images/portfolio/gallery/g-fuji.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Fuji</h5>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-06" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Skaterboy</h5>
-                    <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-07" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-rucksack.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Rucksack</h5>
-                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-08" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Sand Dunes</h5>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Web Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-
-    </section> <!-- end s-portfolio -->
-
-    <!-- testimonials
-    ================================================== -->
-    <section id="press" class="s-testimonials target-section">
-
-        <div class="s-testimonials__bg"></div>
-
-        <div class="row s-testimonials__header">
-            <div class="column large-12">
-                <h3>Press</h3>
-            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="row s-testimonials__content">
+    <!-- work =============================================================== -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <h2 class="section__title">Work</h2>
+        <ol class="roles">
 
-            <div class="column">
-
-                <div class="swiper-container testimonial-slider">
-
-                    <div class="swiper-wrapper">
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/buzzfeed.png" alt="Wired" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong><a href="https://www.buzzfeednews.com/article/adeonibada/bernie-sanders-memes-website" target="_blank">BuzzFeed</a></strong>
-                                    <span>Ade Onibada</span>
-                                </cite>
-                            </div>
-                            <p>
-                            It seems inevitable that a 22-year-old grad student would create the ultimate site to make the meme game much more accessible to anyone who isn’t a whiz with Photoshop.
-                            <p>
-                            Nick Sawhney built the site Bernie Sits in the midst of the meme storm. He told BuzzFeed News that it has been all systems go ever since it went live.
-                            <p>
-                            “It was very frantic," he said. "I felt like my apartment was on fire. I was, like, scaling up the website, going on Twitter and trying to raise money to keep paying for it so it wouldn't just shut down. It was really just a nonstop kind of night.”
-                            <p>
-                            While he doesn't know the full metrics just yet, Sawhney said the site was averaging between 20–30 requests per second the day after the inauguration and has continued to grow as more publications linked out to him.
-                            </p>
-                        </div>
-
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/wired.png" alt="Wired" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong><a href="https://www.wired.com/story/bernie-sanders-meme-street-view-site/" target="_blank">Wired</a></strong>
-                                    <span>Brian Barrett</span>
-                                </cite>
-                            </div>
-                            <p>
-                            "BY 9 PM ET last night, Nick Sawhney knew he was in trouble.
-                            <p>
-                            Just a half hour earlier, still steeped in the afterglow of Joe Biden’s inauguration, Sawhney had pushed live a website that lets you put a viral image of Bernie Sanders—seated, mittened, alone—atop any Google Street View image. The meme had already reached a fever pitch, with the Photoshop faithful placing the senator from Vermont in everything from Mortal Kombat to Edward Hopper's Nighthawks. But Sawhney’s creation, born out of a group chat with friends, added layers of personalization, ease of use, and absurdity; because it fixes Sanders in the same coordinates regardless of his location, he occasionally looks as though he’s floating, or sitting on a car, or in an otherwise unlikely orientation."
-                            </p>
-                        </div> <!-- end testimonial-slider__slide -->
-        
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/insider.jpg" alt="Insider" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong><a href="https://www.insider.com/bernie-sanders-meme-website-anywhere-world-2021-1" target="_blank">Insider</a></strong>
-                                    <span>Max Kalnitz</span>
-                                </cite>
-                            </div>
-                            <p>
-                            "A photo of Sen. Bernie Sanders at President Joe Biden's inauguration immediately caught the attention of the internet on Wednesday, and a website now allows users to place the photo anywhere in the world.
-                            <p>
-                            The website, created by Nick Sawhney, a master's student at NYU studying computer science, asks for a zipcode or address and then puts Sanders in that neighborhood using Google Maps. 
-                            <p>
-                            People quickly sent Sanders on a global tour everywhere from the Eiffel Tower to the streets of Dublin and their own front doors. One Twitter user sent Sanders to Ireland's Great Blasket Island. "
-                            
-                        </div> <!-- end testimonial-slider__slide -->
-        
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/nyt.jpg" alt="NYTimes" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong><a href="https://www.nytimes.com/2021/01/21/us/politics/bernie-sanders-meme.html" target="_blank">NYTimes</a></strong>
-                                    <span>Mike Ives and Daniel Victor</span>
-                                </cite>
-                            </div>
-                            <p>
-                            "Nick Sawhney, a software engineer in New York, created a tool that allows you to insert Mr. Sanders into any street address in Google Maps street view."
-                            </p>
-                        </div> <!-- end testimonial-slider__slide -->
-    
-                    </div> <!-- end testimonial slider swiper-wrapper -->
-
-                    <div class="swiper-pagination"></div>
-
-                </div> <!-- end swiper-container -->
-
-            </div> <!-- end column -->
-
-        </div> <!-- end row -->
-
-    </section> <!-- end s-testimonials -->
-    <section id="education" class="s-resume target-section">
-        <div class="row s-resume__section">
-            <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Education</h3>
+          <li class="role">
+            <p class="role__meta">
+              <span class="role__org">EvolutionIQ</span>
+              Dec 2023 – present
+            </p>
+            <div>
+              <h3 class="role__title">Software Engineer, AI &amp; Backend</h3>
+              <ul>
+                <li>Architected and built the backend and AI insights engine for the
+                  workers' compensation line of business from the ground up — LLM
+                  extraction pipelines, core business logic, database schema design
+                  and horizontal scaling.</li>
+                <li>Shipped production LLM pipelines that pull structured data out of
+                  complex insurance documents, cutting manual review time sharply.</li>
+                <li>Built and drove adoption of agentic tooling across the engineering
+                  team; acted as technical lead, product advisor and client-facing
+                  engineer with enterprise integration partners.</li>
+              </ul>
             </div>
-            <div class="column large-9 tab-12">
+          </li>
 
-                <div class="resume-block">
-
-                    <div class="resume-block__header">
-                        <h4 class="h3">New York University, Arts & Sciences</h4>
-                        <p class="resume-block__header-meta">
-                            <span>B.A. International Relations with a minor in Computer Science</span> 
-
-                            <span class="resume-block__header-date">
-                                GPA: 3.87
-                            </span>
-                            <span class="resume-block__header-date">
-                                c.o. 2020
-                            </span>
-                        </p>
-                    </div>
-
-                    <p>
-                    During my undergraduate career, I studied politics, game theory, international relations, and data science. This culminated in my <a href='https://github.com/nicksawhney/fare_evasion/blob/master/Sawhney_Thesis.pdf' target="_blank"> thesis</a>, a quantitative analysis of the role of policing in the NYC subway system. Beyond academics, I had the great pleasure of serving as General Manager of WNYU Radio 89.1 FM, where I hosted <a href='https://soundcloud.com/wnyu/sets/weekly-refresh' target="_blank"> Weekly Refresh</a>, a technology news talk show. 
-                    </p>
-
-                </div> <!-- end resume-block -->
+          <li class="role">
+            <p class="role__meta">
+              <span class="role__org">Amazon</span>
+              2022 – Dec 2023
+            </p>
+            <div>
+              <h3 class="role__title">Software Development Engineer, FinTech</h3>
+              <ul>
+                <li>Built and maintained Java/AWS payment batching and transmission
+                  infrastructure moving over $1 trillion a year to business vendors
+                  globally.</li>
+                <li>Led international expansion into Turkey, the UAE, Egypt and
+                  Bahrain, each needing regulatory-aware architecture changes.</li>
+                <li>Designed a full-stack partner service health monitoring system, and
+                  rewrote on-call SOPs and ticket taxonomy to cut mean time to
+                  resolution.</li>
+              </ul>
             </div>
-        </div> <!-- s-resume__section -->
-    </section> <!-- end s-resume -->
-    
-    <section id="contact" class="s-contact target-section">
+          </li>
 
-        <div class="row s-contact__header">
-            <div class="column large-12">
-                <h3 class="section-header-allcaps">Say Hello</h3>
+          <li class="role">
+            <p class="role__meta">
+              <span class="role__org">Urvin Finance</span>
+              2020 – 2022
+            </p>
+            <div>
+              <h3 class="role__title">Software Engineer, Simulation &amp; Research</h3>
+              <ul>
+                <li>Built a heterogeneous-agent macroeconomic simulation library in
+                  Python from scratch, used for macro modelling and research.</li>
+                <li>Designed the Azure microservices architecture that ran the
+                  simulations, with Docker containers and inter-process message
+                  passing.</li>
+                <li>Co-authored a macroeconomics research paper based on the modelling
+                  and analysis of simulation outputs.</li>
+              </ul>
             </div>
+          </li>
+
+          <li class="role">
+            <p class="role__meta">
+              <span class="role__org">NYU SMaPP Lab</span>
+              2021
+            </p>
+            <div>
+              <h3 class="role__title">Software Engineer, Data Visualization</h3>
+              <ul>
+                <li>Built a real-time and historical Twitter data visualization
+                  dashboard (Plotly, Flask, MongoDB, Pandas) to make the lab's data
+                  accessible to ML researchers.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <p class="role__meta">
+              <span class="role__org">Skopos Labs</span>
+              2019 – 2020
+            </p>
+            <div>
+              <h3 class="role__title">Software Engineering &amp; Data Science Intern</h3>
+              <ul>
+                <li>Built and maintained a financial simulation and ETL library for ML
+                  engineers, with automation pipelines on AWS EC2, SQL, Elasticsearch
+                  and Boto.</li>
+                <li>Managed junior interns and championed test-driven development with
+                  nose and pytest.</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- projects =========================================================== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <h2 class="section__title">A few of my latest creations</h2>
+
+        <div class="projects">
+
+          <article class="project">
+            <h3 class="project__title">Bernie Sits</h3>
+            <div class="project__body prose">
+              <p>
+                I made a website where people could put a picture of Bernie Sanders,
+                sitting with his mittens on inauguration day, anywhere in the world
+                with Google Maps street view. It went viral, hitting 9.8 million site
+                requests in 4 days, and garnered some press attention as well. I
+                immediately had 2 problems: scaling to meet the demand, and paying for
+                the API requests to Google Maps. Luckily, I got in contact with some
+                great engineers who taught me how to scale in real-time, and more than
+                7,000 people donated money to help pay for the costs. I learned a lot
+                in this project, and hopefully gave some people a good meme along the
+                way.
+              </p>
+              <p>Here's a video I made sharing the story!</p>
+            </div>
+            <div class="embed embed--video">
+              <iframe src="https://www.youtube-nocookie.com/embed/xSvuGU5Nvwc"
+                      title="Nick Sawhney tells the story of building and scaling Bernie Sits"
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Fare Evasion</h3>
+            <div class="project__body prose">
+              <p>
+                For my undergraduate thesis, I researched changes in fare evasion
+                arrests in New York City's subway system as a result of new enforcement
+                policies from the Manhattan District Attorney. For accessibility, I
+                made an interactive map you can use to explore the data set I created
+                for the paper. Feel free to click around!
+                <a class="link"
+                   href="https://github.com/nicksawhney/fare_evasion/blob/master/Sawhney_Thesis.pdf"
+                   target="_blank" rel="noopener">Read the paper here.</a>
+              </p>
+            </div>
+            <div class="embed embed--map">
+              <iframe src="https://nicksawhney.github.io/fare_evasion/"
+                      title="Interactive map of fare evasion arrests in the New York City subway system"
+                      loading="lazy"></iframe>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">NYC Air Pollution</h3>
+            <div class="project__body prose">
+              <p>
+                I noticed that I would cough a lot more during my commute when
+                pollutant levels were high, so I did a brief survey of air quality in
+                the city and its health impacts. This was one of my first projects
+                about the city, and introduced me to the complexities of dealing with
+                different types of map projections and geographic data. It's also a
+                great example of how easy it is to turn around a project from NYC Open
+                Data.
+                <a class="link" href="https://nicksawhney.github.io/NYCAirMaps/"
+                   target="_blank" rel="noopener">Check out the jupyter notebook.</a>
+              </p>
+            </div>
+            <figure class="project__figure">
+              <picture>
+                <source srcset="images/air-map.webp" type="image/webp">
+                <img src="images/air-map.jpg"
+                     alt="Choropleth map of New York City shaded by air pollutant concentration."
+                     width="1200" height="665" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+          </article>
+
         </div>
+      </div>
+    </section>
 
-        <div class="row s-contact__content">
+    <!-- press ============================================================== -->
+    <section class="section" id="press">
+      <div class="wrap">
+        <h2 class="section__title">Press</h2>
+        <ul class="press">
 
-            <div class="column large-7 medium-12">
+          <li class="press__item">
+            <img class="press__logo" src="images/press/nyt.webp" alt="The New York Times"
+                 width="120" height="96" loading="lazy" decoding="async">
+            <blockquote class="press__quote">
+              “Nick Sawhney, a software engineer in New York, created a tool that allows
+              you to insert Mr. Sanders into any street address in Google Maps street
+              view.”
+            </blockquote>
+            <cite class="press__cite">
+              <a class="link"
+                 href="https://www.nytimes.com/2021/01/21/us/politics/bernie-sanders-meme.html"
+                 target="_blank" rel="noopener">The New York Times</a>
+              <span>Mike Ives and Daniel Victor</span>
+            </cite>
+          </li>
 
-                <h4 class="huge-text">
-                I'd love to talk about anything! Feel free to reach out :) 
-                </h4>
+          <li class="press__item">
+            <img class="press__logo" src="images/press/wired.webp" alt="Wired"
+                 width="96" height="96" loading="lazy" decoding="async">
+            <blockquote class="press__quote">
+              “Sawhney's creation, born out of a group chat with friends, added layers
+              of personalization, ease of use, and absurdity.”
+            </blockquote>
+            <cite class="press__cite">
+              <a class="link"
+                 href="https://www.wired.com/story/bernie-sanders-meme-street-view-site/"
+                 target="_blank" rel="noopener">Wired</a>
+              <span>Brian Barrett</span>
+            </cite>
+          </li>
 
-            </div>
+          <li class="press__item">
+            <img class="press__logo" src="images/press/buzzfeed.webp" alt="BuzzFeed News"
+                 width="96" height="96" loading="lazy" decoding="async">
+            <blockquote class="press__quote">
+              “It seems inevitable that a 22-year-old grad student would create the
+              ultimate site to make the meme game much more accessible to anyone who
+              isn't a whiz with Photoshop.”
+            </blockquote>
+            <cite class="press__cite">
+              <a class="link"
+                 href="https://www.buzzfeednews.com/article/adeonibada/bernie-sanders-memes-website"
+                 target="_blank" rel="noopener">BuzzFeed News</a>
+              <span>Ade Onibada</span>
+            </cite>
+          </li>
 
-            <div class="column large-4 medium-12">
+          <li class="press__item">
+            <img class="press__logo" src="images/press/insider.webp" alt="Insider"
+                 width="96" height="96" loading="lazy" decoding="async">
+            <blockquote class="press__quote">
+              “The website, created by Nick Sawhney, asks for a zipcode or address and
+              then puts Sanders in that neighborhood using Google Maps.”
+            </blockquote>
+            <cite class="press__cite">
+              <a class="link"
+                 href="https://www.insider.com/bernie-sanders-meme-website-anywhere-world-2021-1"
+                 target="_blank" rel="noopener">Insider</a>
+              <span>Max Kalnitz</span>
+            </cite>
+          </li>
 
-                <div class="row contact-infos">
-                    <div class="column large-12 medium-6 tab-12">
-                        <div class="contact-block">
-                            <h5 class="contact-block__header">
-                                Email
-                            </h5>
-                            <p class="contact-block__content">
-                                <a class="mailtoui" href="mailto:nicksawhney@nyu.edu">nicksawhney@nyu.edu</a>
-                            </p>
-                        </div> <!-- end contact-block -->
-                    </div>
-<!--                     <div class="column large-12 medium-6 tab-12">
-                        <div class="contact-block">
-                            <h5 class="contact-block__header">
-                                Phone
-                            </h5>
-                            <p class="contact-block__content">
-                                <a href="tel:+1975432345">+197 543 2345</a>
-                            </p>
-                        </div> end contact-block -->
-                    </div> -->
+        </ul>
+      </div>
+    </section>
 
-                    <div class="column large-12">
-                        <a href="mailto:nicksawhney@nyu.edu" class="mailtoui btn btn--primary h-full-width">Reach Out</a>
-                    </div>
-                </div> <!-- end contact-infos -->
-
-            </div>
-        </div> <!-- s-contact__content -->
-
-    </section> <!-- end s-contact -->
-
-
-    <!-- footer
-    ================================================== -->
-    <footer class="s-footer">
-        <div class="row">
-            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
-                <ul class="s-footer__social">
-                    <!-- <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li> -->
-                    
-                    <!-- <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li> -->
-                    <!-- <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li> -->
-                    <li><a href="https://www.linkedin.com/in/nick-sawhney-66331b121/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.twitter.com/nick_sawhney"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                </ul>
-
-            </div>
-
-            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
-                <span>© Copyright Ceevee 2021</span> 
-                <span>This page is adapted from a design by <a href="https://www.styleshout.com/">StyleShout</a></span>
-            </div>
+    <!-- education ========================================================== -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <h2 class="section__title">Education</h2>
+        <div class="prose">
+          <h3 class="edu__degree">New York University, College of Arts &amp; Science</h3>
+          <p class="edu__meta">
+            <span>BA in Computer Science, Economics &amp; Politics</span>
+            <span>Class of 2020</span>
+            <span>GPA 3.87</span>
+            <span>Magna Cum Laude</span>
+          </p>
+          <p>
+            During my undergraduate career, I studied politics, game theory,
+            international relations, and data science. This culminated in my
+            <a class="link"
+               href="https://github.com/nicksawhney/fare_evasion/blob/master/Sawhney_Thesis.pdf"
+               target="_blank" rel="noopener">thesis</a>, a quantitative analysis of
+            the role of policing in the NYC subway system. Beyond academics, I had the
+            great pleasure of serving as General Manager of WNYU Radio 89.1 FM, where I
+            hosted <a class="link"
+               href="https://soundcloud.com/wnyu/sets/weekly-refresh"
+               target="_blank" rel="noopener">Weekly Refresh</a>, a technology news
+            talk show.
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
-             </a>
-        </div> <!-- end ss-go-top -->
+    <!-- contact ============================================================ -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2 class="section__title">Say hello</h2>
+        <p class="contact__lead">I'd love to talk about anything! Feel free to reach out :)</p>
+        <div class="contact__links">
+          <a class="btn" href="mailto:nicksawhney@gmail.com">nicksawhney@gmail.com</a>
+          <a class="link" href="https://github.com/nicksawhney" target="_blank" rel="noopener">GitHub</a>
+          <a class="link" href="https://www.linkedin.com/in/nick-sawhney-66331b121/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
 
+  </main>
 
-    </footer>
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© Nick Sawhney 2026</span>
+      <a class="link" href="#top">Back to top</a>
+    </div>
+  </footer>
 
 </body>
 
